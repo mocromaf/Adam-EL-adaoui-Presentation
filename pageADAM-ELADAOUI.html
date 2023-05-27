@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Présentation ADAM</title>
+  <style>
+    body {
+      background-color: #848484;
+      color: white;
+      font-family: "Black Ops One", Arial, sans-serif;
+      font-size: 76px;
+    }
+
+    #header {
+      text-align: left;
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: Black;
+      width: fit-content;
+    }
+
+    #name {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    #slogan {
+      font-size: 50px;
+      margin-bottom: 20px;
+      border: 9px solid white;
+      border-radius: 10px;
+      padding: 10px;
+      display: inline-block;
+    }
+
+    #advertisement {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    #logo {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      width: 100px;
+      height: 100px;
+      animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    #footer {
+      text-align: center;
+      margin-top: 100px;
+      font-size: 20px;
+      position: fixed;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    #footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    #advertisement img {
+      width: 50%;
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <div id="name">
+      <span style="font-size: 20px;">Nom:</span> EL ADAOUI<br>
+      <span style="font-size: 20px;">Prénom:</span> ADAM
+    </div>
+  </div>
+
+  <div id="advertisement">
+    <div id="slogan">
+       RED ONE Gel : La clé pour des coiffures impeccables du matin jusqu'au soir.
+    </div>
+    <img src="Capture d’écran 2023-05-27 144340.png" alt="Affiche publicitaire">
+  </div>
+    
+  <img id="logo" src="images.jpg" alt="Logo animé">
+
+  <div id="footer">
+    <a href="fin.html">FIN</a>
+  </div>
+
+  <script>
+    function animateBorders() {
+      const slogan = document.getElementById('slogan');
+      const colors = ['red', 'green', 'blue', 'yellow', 'orange'];
+
+      let currentColorIndex = 0;
+
+      setInterval(() => {
+        slogan.style.borderColor = colors[currentColorIndex];
+        currentColorIndex = (currentColorIndex + 1) % colors.length;
+      }, 500);
+    }
+
+    animateBorders();
+  </script>
+</body>
+</html>
